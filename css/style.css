@@ -1,0 +1,668 @@
+
+/*RESETEO*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+input {
+    color: unset;
+    background-color: transparent;
+    cursor: text;
+    font: unset;
+    padding: 0px;
+    border: none;
+    border-image: none;
+}
+textarea {
+    color: unset;
+    border: none;
+    border-image: none;
+    background-color: transparent;
+    flex-direction: column;
+    resize: auto;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    column-count: initial !important;
+    font: unset;
+}
+select {
+    color: unset;
+
+    background-color: transparent;
+    cursor: default;
+    border: none;
+}
+/*FIN RESETEO*/
+
+
+
+/*GENERAL*/
+.no-gutters {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+hr {
+
+    border-top: 1.5px solid rgb(40, 39, 39);
+}
+
+/*FORMATO MENU*/
+    .navbar {
+
+        background-color: rgb(40, 39, 39);
+        padding: 0px 20px 0px 20px;
+        /*padding: 0px 60px 0px 35px;*/
+    }
+
+    header li {
+        position: relative;
+    }
+    button {            
+        width: 20px;
+        height: 20px;
+        border: none !important;
+
+    }
+    button span {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .nombreEscuela.navbar-brand:hover{
+        text-shadow: 1px 1px 10px rgba(243, 213, 145, .9);
+    }
+    ul li:hover {
+        text-shadow: 1px 1px 5px white;
+    }
+
+    /*SUB-MENU*/
+    
+    .sub-menu {
+        display: none;
+        text-shadow: none;
+    }
+    .sub-menu li {
+        display: block;
+        text-indent: 2em;
+        line-height: 2em;
+    }
+    ul li:hover .sub-menu {
+        display: block;
+    }
+
+
+
+
+    /*LARGE (992px) en adelante*/
+
+        @media (min-width: 992px) {
+            .sub-menu {
+                display: none;
+                position: absolute; 
+                top: 100%;
+                left: 0%;
+                z-index: 100;
+
+                background-color: rgb(77,57,97,0.6);
+                border-radius: 5px;
+                text-shadow: none;
+
+                min-width: 100%;
+                white-space: nowrap;
+            }
+            .sub-menu li {
+                display: block;
+                text-indent: unset;
+                line-height: 2em;
+            }
+            ul li:hover .sub-menu {
+                display: block;
+            }
+        }
+
+
+
+/*FIN FORMATO MENU*/
+
+/*INDEX*/
+.divFondoEstrellas {
+    background-image: url(../recursos/imagen_fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 565px;
+    padding-top: 100px;
+}
+
+    /*animacion:*/
+    .divFondoEstrellas .nombreEscuela {
+        animation-name: animacionNombreEscuela;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 2.5s;
+        animation-delay: 0s;
+    }
+    @keyframes animacionNombreEscuela {
+        0% {text-shadow: 3px 3px 5px  violet;}
+        50% {text-shadow: 3px 3px 5px rgb(238, 130, 238, .03);}
+        100% {text-shadow: 3px 3px 5px  violet;}
+    }
+/*FIN INDEX/*
+
+
+/*CONTENEDOR TITULO DE PAGINA*/
+.divTituloPagina {
+    background-color: rgb(40, 39, 39);
+    /*height: 110px;*/
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+
+/*PAGINA "NUESTRA VISION" "QUIENES SOMOS" "CONSULTORIA"*/
+#imagenPlaneta {
+    background-image: url(../recursos/tierra.jpg);
+}
+#imagenLibro {
+    background-image: url(../recursos/libroRectangular.jpg);
+}
+
+.imagenRectangular  {
+    height: 80px;
+    background-position: center;
+    background-size: cover;
+}
+.imagenRedonda {
+    
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+    .imagenRedonda {
+        max-width: 300px;
+}
+}
+@media (min-width: 1200px) {
+    .imagenRedonda {
+        max-width: 350px;
+}
+}
+/*FIN PAGINA "NUESTRA VISION" "QUIENES SOMOS" "CONSULTORIA"*/
+
+/*PAGINA "QUIENES SOMOS"*/
+
+.principalEquipo .imagenRedonda {
+    transition: all 0.5s linear;
+}
+.principalEquipo .imagenRedonda:hover {
+    transform: scale(1.5, 1.5);
+    z-index: 0;
+}
+
+/*FIN PAGINA "QUIENES SOMOS"*/
+
+
+/*FORMULARIOS DE CONTACTO*/
+
+.contactoSeccion, .principalContacto {
+    background-color: rgb(252, 233, 186);
+    /*padding: 25px 0px 25px 0px;
+    margin: 100px 175px 25px 175px;
+    text-align: center;*/
+}
+input {
+    border-bottom: solid 1px black;
+}
+input.boton {
+    border: none;
+}
+textarea {
+    border-bottom: solid 1px black;
+    padding: 0px;
+}
+
+select {
+    border: solid 1px rgba(40, 39, 39, 0.6);
+    border-radius: 4px;
+}
+
+/*FIN FORMULARIOS DE CONTACTO*/
+
+/*PAGINA "CONTACTO"*/
+.principalContacto .tituloSeccion {
+    text-align: center;
+}
+.datosContacto p {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*FOOTERS*/
+footer {
+    margin: 0px -15px 0px -15px;
+    /*padding: 0px 60px 0px 35px;*/
+    /*height: 90px;*/
+    background-color: rgb(40, 39, 39);
+}
+.flexFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+    /*FOOTER DE PAGINA "CONTACTO"*/
+    #contactoFooter.flexFooter {
+        justify-content: center;
+    }
+/*FIN DE FOOTERS*/
+
+
+
+
+
+/*FORMATO TIPOGRAFIAS*/
+   
+body {
+
+    font-family: 'helvetica', sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+}
+
+/*FORMATOS DE PARRAFOS*/
+p {
+    font-size: 10px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+} 
+
+
+/*FIN DE FORMATOS DE PARRAFOS/*
+
+
+/*TIPOGRAFIAS DE TITULOS*/
+    .nombreEscuela {
+        color: rgb(243, 213, 145, .9);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 900;
+        letter-spacing: 1px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .bajadaNombre {
+        color: rgb(243, 213, 145, .9);
+        font-family: "helvetica", sans-serif;
+        font-size: 12px;
+        letter-spacing: 3px;
+        font-weight: 200;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .nombreEscuela.navbar-brand {
+        color: rgb(243, 213, 145, .9);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        letter-spacing: 2px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .tituloPagina {
+        color: rgb(243, 213, 145, .9);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 22px;
+        text-align: center;
+    }
+   .bajadaTituloPagina {
+        color: rgb(224, 223, 223);
+        font-family: "helvetica", sans-serif;
+        font-size: 10px;
+        letter-spacing: 1x;
+        font-weight: 200;
+        text-align: center;
+    }
+
+    .tituloSeccion {
+        color:  rgb(40, 39, 39);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 18px;
+        margin-bottom: 0.36em;
+    }
+
+    .subtituloSeccion {
+        color:  rgb(40, 39, 39);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 16px;
+        margin-bottom: 0.36em;
+    }
+
+
+    #contactoMain .tituloPagina {
+        color:  rgb(40, 39, 39);
+    }
+    /*FIN DE TIPOGRAFIAS DE TITULOS*/
+
+
+    
+
+    /*TIPOGRAFIAS DE MENU*/
+    .nombreEscuela.navbar-brand:hover, .nombreEscuela.navbar-brand:focus {
+        color: rgb(243, 213, 145, .9);
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+        color: rgb(224, 223, 223);
+    }
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:hover {
+        color: rgb(224, 223, 223);
+    }
+    nav ul li, .sub-menu li {
+        font-family: 'Oswald', sans-serif;
+        color: rgb(224, 223, 223);
+        font-size: 10px;
+        font-weight: 200;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    a:hover {
+        color: inherit;
+    }
+    /*FIN DE TIPOGRAFIAS DE  MENU*/
+
+    /*TIPOGRAFIAS DE FORMULARIOS*/
+    input, textarea, select, label, ::placeholder {
+        color:  rgba(40, 39, 39, 0.8);
+        font-family: "helvetica", sans-serif;
+        font-weight: 200;
+        letter-spacing: 2px;
+        font-size: 10px;
+    }
+    input.boton {
+        color:  rgba(40, 39, 39);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 600;
+    }
+
+/*FIN DE TIPOGRAFIAS DE FORMULARIOS*/
+
+
+
+
+
+
+
+
+/* ========MEDIA QUERYS======== */
+
+/*SMALL en adelante*/
+@media (min-width: 576px) {
+    .nombreEscuela {
+        font-size: 45px;
+    }
+    .bajadaNombre {
+        font-size: 16px;
+    }
+}
+
+
+
+
+/*MEDIUM en adelante*/
+    @media (min-width: 768px) {
+    /*CONTACTO DE SECCION*/
+        .contactoSeccion {
+        border-radius: 5px;
+        }
+
+
+    /*TIPOGRAFIAS*/
+
+        /*TIPOGRAFIAS DE PARRAFOS*/
+            p {
+                font-size: 13px;
+            }
+            .principalVision p {
+                line-height: 2em;
+            }
+
+        /*FIN DE TIPOGRAFIAS DE PARRAFOS*/
+
+
+        .nombreEscuela.navbar-brand {
+            font-size: 18px;
+        }
+        .tituloPagina {
+            font-size: 30px;
+        }
+       .bajadaTituloPagina {
+            font-size: 12px;
+        }
+        .tituloSeccion {
+            font-size: 26px;
+        }
+        .subtituloSeccion {
+            font-size: 22px;
+        }
+        .subtituloFooter {
+            color: rgb(243, 213, 145, .9);
+            font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 0.36em;
+            font-size: 17px;
+        }
+
+        /*MENU*/
+        nav ul li, .sub-menu li {
+            font-size: 16px;
+        }
+        /*FORMULARIOS*/
+        input, textarea, select, label, ::placeholder {
+            font-size: 14px;
+        }
+        input.boton {
+            font-size: 16px;
+        }
+
+    }
+
+/*FIN MEDIUM en adelante*/
+
+
+/*LARGE en adelante*/
+@media (min-width: 992px) {
+    
+    /*ICONITOS*/
+    footer img {
+        transform: scale(1.5, 1.5);
+    }
+
+    /*TIPOGRAFIAS*/
+
+        /*TIPOGRAFIAS DE PARRAFOS*/
+        p {
+            font-size: 16px;
+        } 
+        footer p {
+            color: rgb(224, 223, 223);
+            font-family: "helvetica", sans-serif;
+            font-size: 12px;
+            letter-spacing: 1px;
+            font-weight: 200;
+            margin: 0px;
+        }
+        /*FIN DE TIPOGRAFIAS DE PARRAFOS*/
+        .nombreEscuela {
+            font-size: 60px;
+        }
+        .nombreEscuela.navbar-brand {
+            font-size: 20px;
+        }
+        .tituloPagina {
+            font-size: 36px;
+        }
+        .bajadaTituloPagina {
+            font-size: 14px;
+        }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    /*TITULOS
+
+    .nombreEscuela {
+        color: rgb(243, 213, 145, .9);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 900;
+        letter-spacing: 2px;
+        font-size: 60px;
+    }
+
+    .bajadaNombre {
+        color: rgb(243, 213, 145, .9);
+        font-family: "helvetica", sans-serif;
+        font-size: 16px;
+        letter-spacing: 6px;
+        font-weight: 200;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .nombreEscuela.navbar-brand {
+        color: rgb(243, 213, 145, .9);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        letter-spacing: 2px;
+        font-size: 20px;
+        font-weight: 550;
+    }
+    .nombreEscuela.navbar-brand:hover, .nombreEscuela.navbar-brand:focus {
+        color: rgb(243, 213, 145, .9);
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+        color: rgb(224, 223, 223);
+    }
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:hover {
+        color: rgb(224, 223, 223);
+    }
+    nav ul li, .dropdown-item {
+        font-family: 'Oswald', sans-serif;
+        color: rgb(224, 223, 223);
+        font-size: 16px;
+        font-weight: 200;
+    }
+    
+
+    .tituloPagina {
+        color: rgb(243, 213, 145, .9);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .bajadaTituloPagina {
+        color: rgb(224, 223, 223);
+        font-family: "helvetica", sans-serif;
+        font-size: 15px;
+        letter-spacing: 1x;
+        font-weight: 200;
+        text-align: center;
+    
+    }
+
+    #contactoMain .tituloPagina {
+        color:  rgb(40, 39, 39);
+    }
+
+    .tituloSeccion {
+        color:  rgb(40, 39, 39);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 26px;
+        margin-bottom: 0.36em;
+    }
+
+    .subtituloSeccion {
+        color:  rgb(40, 39, 39);
+        font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 22px;
+        margin-bottom: 0.36em;
+    }
+
+    footer .subtituloSeccion {
+        color: rgb(243, 213, 145, .9);
+        font-size: 17px;
+    }
+
+p {
+    margin-bottom: 0.5em;
+}
+
+footer p {
+    color: rgb(224, 223, 223);
+    font-family: "helvetica", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin: 0px;
+}
+
+ul li {
+    font-family: 'Oswald', sans-serif;
+    color: rgb(224, 223, 223);
+    font-size: 16px;
+    font-weight: 200;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+.flexModel1 p {
+    line-height: 2em;
+}
+*/
