@@ -281,6 +281,7 @@ body {
 
 /*FORMATOS DE PARRAFOS*/
 p {
+    color:rgb(40, 39, 39);
     font-size: 10px;
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
@@ -296,7 +297,7 @@ p {
         font-family: 'georgia', 'palatino','book antiqua','palatino linotype',serif;
         font-weight: 900;
         letter-spacing: 1px;
-        font-size: 24px;
+        font-size: 35px;
         text-align: center;
     }
 
